@@ -409,8 +409,10 @@ class TTSSpeaker:
         filtered_text = self.filter_emojis_and_special_chars(text)
         logger.debug(f"原始文本: {text}")
         logger.debug(f"过滤后文本: {filtered_text}")
-        #obs_controller.set_text_source_content("textai123",filtered_text)
-        #obs_controller.set_text_source_content("textai",filtered_text)
+        obs_controller.set_text_source_content("textai123",filtered_text)
+        obs_controller.set_text_source_content("textai",filtered_text)
+        textAI.text("textai",filtered_text)
+        textAI.text("textai123",filtered_text)
         
         with self._lock:
             self._is_speaking = True
@@ -436,6 +438,7 @@ class TTSSpeaker:
                 obs_controller.set_text_source_content("textai123","")
                 obs_controller.set_text_source_content("textai","")
                 textAI.text("textai","")
+                textAI.text("textai123","")
     
     def _speak_with_localai(self, text: str) -> bool:
         obs_controller.set_text_source_content("textai",text)

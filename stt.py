@@ -12,18 +12,12 @@ def recognize_speech():
     recognizer = sr.Recognizer()
     try:
         with sr.Microphone() as source:
-            # 调整环境噪声
-            logger.info("正在调整环境噪声，请保持安静...")
-            recognizer.adjust_for_ambient_noise(source, duration=1)
-            logger.info("环境噪声调整完成")
-            
             print("请开始说话...")
-            audio = recognizer.listen(source, phrase_time_limit=15)
+            audio = recognizer.listen(source, phrase_time_limit=7.5)
             print("录音完成")
-        
         try:
             # 优先使用Google语音识别
-            text = recognizer.recognize_google(audio, language="zh-CN")
+            text = recognizer.recognize_google(audio, language="zh-cn")
 
             print(f"识别结果: {text}")
             print(f"你：{text}")
