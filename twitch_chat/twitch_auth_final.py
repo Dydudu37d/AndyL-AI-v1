@@ -202,8 +202,8 @@ class TwitchAuth:
             
         # 读取现有的.env文件内容
         env_content = {}
-        if os.path.exists('.env'):
-            with open('.env', 'r', encoding='utf-8') as f:
+        if os.path.exists('./.env'):
+            with open('./.env', 'r', encoding='utf-8') as f:
                 for line in f:
                     if '=' in line and not line.strip().startswith('#'):
                         key, value = line.split('=', 1)
@@ -215,7 +215,7 @@ class TwitchAuth:
         
         # 写回.env文件
         try:
-            with open('.env', 'w', encoding='utf-8') as f:
+            with open('./.env', 'w', encoding='utf-8') as f:
                 for key, value in env_content.items():
                     f.write(f"{key}={value}\n")
             print("\n令牌信息已成功写入.env文件")

@@ -194,7 +194,7 @@ class TwitchAuth:
         """将令牌写入.env文件"""
         try:
             # 读取现有.env文件
-            with open('.env', 'r', encoding='utf-8') as f:
+            with open('./.env', 'r', encoding='utf-8') as f:
                 lines = f.readlines()
                 
             # 更新或添加令牌行
@@ -215,7 +215,7 @@ class TwitchAuth:
                     lines.append(f'{key}={value}\n')
                     
             # 写回.env文件
-            with open('.env', 'w', encoding='utf-8') as f:
+            with open('./.env', 'w', encoding='utf-8') as f:
                 f.writelines(lines)
                 
             print("已将令牌写入.env文件")
