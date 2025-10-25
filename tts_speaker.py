@@ -7,6 +7,7 @@ import requests
 import json
 import time
 import asyncio
+import socket
 import comtypes.client  # 用于Windows语音API
 import re
 import numpy as np
@@ -33,9 +34,25 @@ logging.basicConfig(
 )
 logger = logging.getLogger("TTSSpeaker")
 
+def get_local_ip():
+    try:
+        # 建立一个临时的UDP连接到Google的DNS服务器
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(('8.8.8.8', 80))
+        # 获取连接的本地IP地址
+        ip = s.getsockname()[0]
+        s.close()
+        return ip
+    except Exception as e:
+        return f"获取IP时出错: {e}"
+
+local_ip = get_local_ip()
+print(f"本机内网IP: {local_ip}")
+host = input("请输入OBS WebSocket服务器地址 (默认: 192.168.0.186): ") or local_ip
+
 # OBS控制器配置
 obs_controller = OBSController(
-    host=input("请输入OBS WebSocket服务器地址 (默认: 192.168.0.186): ") or '192.168.0.186',
+    host=host,
     port=4455,
     password='gR7UXLWyqEBaRd2S'
 )
