@@ -16,6 +16,7 @@ test_*.py
 *_demo.py
 *_debug.py
 *_example.py
+*_examples.py
 *_guide.py
 
 # IDEs and editors

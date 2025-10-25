@@ -14,7 +14,7 @@ from interactive_obs_text_tool import OBSTextTool # textAI.modify_text_source("T
 from obs import obs_controller
 from ai.ai_brain import AIBrain, VTuberPersona, get_ai_brain
 from tts_speaker import get_tts_speaker,TextProcessor
-import re_remove_words_example as re_remove
+import re_remove_words as re_remove
 from windows_speech_recognizer import get_speech_recognizer as get_windows_speech_recognizer
 from localai_speech_recognizer import get_speech_recognizer as get_unified_speech_recognizer
 from stt_recognizer import get_speech_recognizer as get_stt_speech_recognizer
