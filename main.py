@@ -8,11 +8,11 @@ from datetime import datetime
 
 # 导入AI电脑控制系统
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-from ai_computer_controller import AIComputerController
+from ai.ai_computer_controller import AIComputerController
 from ctypes import windll
 from interactive_obs_text_tool import OBSTextTool # textAI.modify_text_source("TextAI","你好，我是AndyL，很高兴和你聊天！")
 from obs import obs_controller
-from ai_brain import AIBrain, VTuberPersona, get_ai_brain
+from ai.ai_brain import AIBrain, VTuberPersona, get_ai_brain
 from tts_speaker import get_tts_speaker,TextProcessor
 import re_remove_words_example as re_remove
 from windows_speech_recognizer import get_speech_recognizer as get_windows_speech_recognizer
@@ -23,10 +23,10 @@ from screen_capture import ScreenCapture, demo_screen_control
 from dotenv import load_dotenv
 from keyboard_shortcuts import start_keyboard_shortcuts, stop_keyboard_shortcuts, set_recording_callback
 from pynput import keyboard
-from ai_thought_display import AIThoughtDisplay
+from ai.ai_thought_display import AIThoughtDisplay
 from vtube_studio_controller import *
 # 导入AI想法显示模块
-from ai_thought_display import get_ai_thought_display
+from ai.ai_thought_display import get_ai_thought_display
 # 导入语音训练模块
 import chat_processing as chat
 import twitch_subscription_handler as sub
