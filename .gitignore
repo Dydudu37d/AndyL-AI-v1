@@ -1,0 +1,97 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+.venv/
+venv/
+env.bak/
+venv.bak/
+
+# Test files
+test_*.py
+*_test.py
+*_demo.py
+*_debug.py
+*_example.py
+*_guide.py
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# Test coverage
+htmlcov/
+.coverage
+.coverage.*
+.pytest_cache/
+
+# Logs
+logs/
+*.log
+
+# Large files and models
+whisper_models/
+ffmpeg/
+model/
+models/
+models/
+exported_voice_models/
+neural_network_stt/train/
+andyL_neural_network/
+checkpoints/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Temporary files and logs
+*.tmp
+*.temp
+.cache/
+logs/
+*.log
+clean_log/
+create_clean_log/
+*.txt
+*.bat
+*.config
+
+# Binary files and data
+exported_audio/
+*.pth
+*.onnx
+*.pt
+sample_dataset/
+osu/data/
+osu/pltimg/
+*.bak
+*.backup*
