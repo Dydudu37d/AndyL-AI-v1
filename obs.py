@@ -36,7 +36,7 @@ def get_local_ip():
 
 local_ip = get_local_ip()
 print(f"本机内网IP: {local_ip}")
-host = local_ip
+host = input("请输入OBS WebSocket服务器地址 (默认: 192.168.0.186): ") or local_ip
 port = 4455
 password = '5he8ccylTZTWngjq'
 try:
@@ -725,7 +725,7 @@ local_ip = get_local_ip()
 print(f"本机内网IP: {local_ip}")
 
 obs_controller = OBSController(
-    host=local_ip,
+    host=input("请输入OBS WebSocket服务器地址 (默认: 192.168.0.186): ") or local_ip,
     port=4455,
     password='5he8ccylTZTWngjq'
 )

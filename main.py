@@ -29,7 +29,7 @@ from vtube_studio_controller import *
 from ai.ai_thought_display import get_ai_thought_display
 # 导入语音训练模块
 import chat_processing as chat
-import twitch_subscription_handler as sub
+import twitch_chat.twitch_subscription_handler as sub
 # 加载环境变量
 load_dotenv()
 

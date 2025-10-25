@@ -35,7 +35,7 @@ logger = logging.getLogger("TTSSpeaker")
 
 # OBS控制器配置
 obs_controller = OBSController(
-    host='192.168.0.186',
+    host=input("请输入OBS WebSocket服务器地址 (默认: 192.168.0.186): ") or '192.168.0.186',
     port=4455,
     password='gR7UXLWyqEBaRd2S'
 )
