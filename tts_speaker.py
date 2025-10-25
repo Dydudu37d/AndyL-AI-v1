@@ -413,6 +413,8 @@ class TTSSpeaker:
         obs_controller.set_text_source_content("textai",filtered_text)
         textAI.text("textai",filtered_text)
         textAI.text("textai123",filtered_text)
+        textAI.modify_text_source("textai",filtered_text)
+        textAI.modify_text_source("textai123",filtered_text)
         
         with self._lock:
             self._is_speaking = True
@@ -437,6 +439,8 @@ class TTSSpeaker:
                 self._is_speaking = False
                 obs_controller.set_text_source_content("textai123","")
                 obs_controller.set_text_source_content("textai","")
+                textAI.modify_text_source("textai","")
+                textAI.modify_text_source("textai123","")
                 textAI.text("textai","")
                 textAI.text("textai123","")
     
