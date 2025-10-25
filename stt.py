@@ -27,7 +27,7 @@ def recognize_speech():
             
             # 尝试使用Sphinx作为备选
             try:
-                text = recognizer.recognize_sphinx(audio, language="zh-CN")
+                text = recognizer.recognize_sphinx(audio, language="zh-TW")
                 print(f"Sphinx识别结果: {text}")
                 print(f"你：{text}")
                 return text
