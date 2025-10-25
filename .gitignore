@@ -73,6 +73,7 @@ checkpoints/
 .env.development.local
 .env.test.local
 .env.production.local
+.env.example
 
 # Temporary files and logs
 *.tmp
